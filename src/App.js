@@ -20,7 +20,7 @@ import { onAuthStateChanged } from 'firebase/auth'; // Firebase function to moni
 function App() {
   // State to store the current user's authentication status
   const [user, setUser] = useState(null);
-
+  console.log(user);
   // useEffect hook to monitor changes in the authentication state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
