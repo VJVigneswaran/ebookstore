@@ -1,0 +1,126 @@
+.featured-ebooks {
+    padding: 10px;
+}
+
+/*.ebook-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.category-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+*/
+.ebook-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}   
+
+.ebook-item{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ebook-item img{ 
+        cursor: pointer;
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 1rem;/* Maintains aspect ratio and crops if necessary */
+    }
+
+button{
+    padding: 5px;
+}
+
+.ebook-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.categories {
+    padding: 20px;
+    text-align: center; /* Center align titles and links */
+}
+
+.categories-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Title color */
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Increased gap for better spacing */
+}
+
+.category-item {
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 10px; /* More rounded corners */
+    text-align: center;
+    background-position: center;
+    background-size: cover; /* Ensure the background image covers the item */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px; /* Increased height for better visuals */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.see-more {
+    background-color: #f0f0f0; /* Light background for 'See More' */
+    color: #333; /* Dark text for visibility */
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Match height with other categories */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.see-more:hover {
+    background-color: #ddd; /* Darker on hover */
+}
+
+.category-item a, .see-more a {
+    text-decoration: none; /* Remove underline */
+    color:  white; /* Link color for categories */
+    position: absolute; /* Position absolute for centering */
+    bottom: 15px; /* Position text near the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for contrast */
+    transition: color 0.3s ease; /* Transition for text color */
+}
+
+.category-item:hover a {
+    color: #ffd700; /* Gold color on hover */
+}

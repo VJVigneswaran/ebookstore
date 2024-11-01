@@ -1,0 +1,101 @@
+.book-container {
+  display: flex;
+  flex-direction: column; /* Default to column for smaller screens */
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.book-details {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 2rem; /* Space below book details when stacked */
+}
+
+.book-image {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.similar-books {
+  background-color: #f9f9f9; /* Optional background for consistency */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.similar-books h3 {
+  margin-bottom: 1rem;
+}
+
+.similar-books-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.similar-book {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.similar-book:hover {
+  transform: scale(1.05);
+}
+
+.similar-book-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .book-container {
+    flex-direction: row; /* Change to row for tablets and larger screens */
+    justify-content: space-between; /* Ensure space between elements */
+  }
+
+  .book-details {
+    max-width: 45%; /* Adjust width */
+    margin-bottom: 0; /* Remove bottom margin when side by side */
+  }
+
+  .similar-books {
+    max-width: 45%; /* Adjust width */
+    margin-left: 2rem; /* Space between sections */
+  }
+}
+
+@media (max-width: 480px) {
+  .book-image {
+    width: 100%; /* Make the book image responsive */
+    max-width: 200px; /* Limit max width for larger screens */
+  }
+
+  .similar-books {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+
+  .similar-books-list {
+    flex-direction: column; /* Stack similar books vertically on mobile */
+    align-items: center; /* Center the similar books */
+  }
+
+  .similar-book {
+    width: 100%; /* Full width for similar books on mobile */
+    max-width: 150px; /* Limit max width for similar books */
+  }
+}

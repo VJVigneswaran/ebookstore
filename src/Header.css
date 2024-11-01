@@ -1,0 +1,107 @@
+header{
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+    
+}
+
+
+#brand-name{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+#nav-menu {
+    display: none;
+    position: absolute;
+    left:0;
+    top: 65px;
+    background-color: rgba(56, 56, 56, 0.9);
+    width: 40%;
+    min-height: 100vh;
+} 
+
+#nav-menu ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    width:100%;
+}
+
+#nav-menu ul li{ 
+    font-size: 1.3rem;
+    list-style-type: none;
+    padding: 1em;
+}
+
+#nav-menu ul li:hover{
+    background-color: rgb(87, 82, 82);
+}
+
+#nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+}
+
+@media screen and (min-width: 645px){
+
+    header{
+         position: static;
+         top: 0;
+         left: 0;
+         justify-content: space-between;
+     }
+ 
+     #brand-name{
+         width:auto;
+     }
+ 
+     #nav-icon{
+         display:none;
+     }
+ 
+     #nav-menu{
+         display: flex !important;
+         position: static;
+         width: auto;
+         min-height: auto;
+         background-color: inherit;
+     }
+ 
+     #nav-menu ul{
+         display: block;
+     }
+ 
+     #nav-menu ul li{
+         display: inline-block;
+         margin-right: 10px;
+         padding: 0.6em;
+     }
+    } 
+
+@media screen and (min-width: 1024px){
+    header{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

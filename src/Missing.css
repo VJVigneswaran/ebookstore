@@ -1,0 +1,18 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text color */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+}
+
+p {
+  font-size: 1.2rem; /* Slightly larger font size for the paragraph */
+}
